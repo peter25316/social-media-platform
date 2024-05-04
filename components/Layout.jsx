@@ -1,4 +1,5 @@
 import Sidebar from "./layout/Sidebar";
+import FollowBar from "./layout/FollowBar";
 
 const Layout = (props) => {
   return (
@@ -9,6 +10,7 @@ const Layout = (props) => {
           <div className="col-span-3 lg:col-span-2 border-x-[1px] border-neutral-800">
             {props.children}
           </div>
+          <FollowBar />
         </div>
       </div>
     </div>
