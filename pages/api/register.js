@@ -1,8 +1,8 @@
-import bcrypt from "brcrypt";
+import bcrypt from "bcrypt";
 import prisma from "@/libs/prismadb";
 
 const handler = async (req, res) => {
-  if (req.method != "POST") return res.status(405).end();
+  if (req.method !== "POST") return res.status(405).end();
 
   try {
     const { email, username, name, password } = req.body;

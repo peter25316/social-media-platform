@@ -1,4 +1,4 @@
-import serverAuth from "@/libs/serverAuth";
+import prisma from "@/libs/prismadb";
 
 const handler = async (req, res) => {
   if (req.method !== "GET") {
@@ -6,9 +6,13 @@ const handler = async (req, res) => {
   }
 
   try {
-    const { currentUser } = await serverAuth(req);
+    const users = await prisma.user.findMany({
+      orderBy: {
+        createdAt: "desc",
+      },
+    });
 
-    return res.status(200).json(currentUser);
+    return res.status(200).json(users);
   } catch (error) {
     console.log(error);
     return res.status(400).end();

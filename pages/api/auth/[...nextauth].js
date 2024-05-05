@@ -1,4 +1,4 @@
-import bcrypt from "brcrypt";
+import bcrypt from "bcrypt";
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
@@ -14,7 +14,7 @@ export default NextAuth({
         password: { label: "password", type: "password" },
       },
       authorize: async (credentials) => {
-        if (credentials?.email || !credentials?.password)
+        if (!credentials?.email || !credentials?.password)
           throw new Error("Invalid credentials");
 
         const user = await prisma.user.findUnique({
@@ -23,15 +23,14 @@ export default NextAuth({
           },
         });
 
-        if (!user || !user?.hashedPassword)
-          throw new Error("Invalid credentials");
+        if (!user?.hashedPassword) throw new Error("Invalid credentials 2");
 
         const isCorrectPassword = await bcrypt.compare(
           credentials.password,
           user.hashedPassword
         );
 
-        if (!isCorrectPassword) throw new Error("Invalid credentials");
+        if (!isCorrectPassword) throw new Error("Invalid credentials 3");
 
         return user;
       },
