@@ -3,6 +3,7 @@ import useRegisterModal from "@/hooks/useRegisterModal";
 import { useCallback, useState } from "react";
 import Input from "../Input";
 import Modal from "../Modal";
+import axios from "axios";
 
 const RegisterModal = () => {
   const loginModal = useLoginModal();
@@ -26,6 +27,13 @@ const RegisterModal = () => {
   const onSubmit = useCallback(async () => {
     try {
       setIsLoading(true);
+
+      await axios.post("/api/register", {
+        email,
+        password,
+        username,
+        name,
+      });
 
       registerModal.onClose();
     } catch (error) {
