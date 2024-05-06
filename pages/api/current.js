@@ -6,7 +6,7 @@ const handler = async (req, res) => {
   }
 
   try {
-    const { currentUser } = await serverAuth(req);
+    const { currentUser } = await serverAuth(req, res);
 
     return res.status(200).json(currentUser);
   } catch (error) {
