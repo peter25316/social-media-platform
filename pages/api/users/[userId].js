@@ -6,7 +6,7 @@ const handler = async (req, res) => {
   try {
     const { userId } = req.query;
 
-    if (!user || typeof userId !== "string") {
+    if (!userId || typeof userId !== "string") {
       throw new Error("Invalid ID");
     }
 

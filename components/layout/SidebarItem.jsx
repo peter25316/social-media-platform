@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { useCallback } from "react";
 
 const SidebarItem = (props) => {
-  const { label, href, Icon, onClick, auth } = props;
+  const { label, href, icon: Icon, onClick, auth } = props;
 
   const loginModal = useLoginModal();
   const { data: currentUser } = useCurrentUser();
