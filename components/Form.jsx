@@ -79,7 +79,7 @@ const Form = (props) => {
               <Button
                 disabled={isLoading || !body}
                 onClick={onSubmit}
-                label="Tweet"
+                label="Post"
               />
             </div>
           </div>

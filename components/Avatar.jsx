@@ -1,7 +1,7 @@
-import useUser from "@/hooks/useUser";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useCallback } from "react";
+import useUser from "../hooks/useUser";
 
 const Avatar = (props) => {
   const { userId, isLarge, hasBorder } = props;

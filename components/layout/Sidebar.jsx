@@ -2,7 +2,7 @@ import { BsBellFill, BsHouseFill } from "react-icons/bs";
 import { FaUser } from "react-icons/fa";
 import { BiLogOut } from "react-icons/bi";
 
-import useCurrentUser from "@/hooks/useCurrentUser";
+import useCurrentUser from "../../hooks/useCurrentUser";
 
 import SidebarLogo from "./SidebarLogo";
 import SidebarItem from "./SidebarItem";

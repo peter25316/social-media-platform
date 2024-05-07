@@ -1,5 +1,5 @@
-import useCurrentUser from "@/hooks/useCurrentUser";
-import useLoginModal from "@/hooks/useLoginModal";
+import useCurrentUser from "../../hooks/useCurrentUser";
+import useLoginModal from "../../hooks/useLoginModal";
 
 import { useRouter } from "next/router";
 import { useCallback } from "react";

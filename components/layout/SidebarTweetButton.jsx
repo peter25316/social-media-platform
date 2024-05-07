@@ -1,4 +1,4 @@
-import useLoginModal from "@/hooks/useLoginModal";
+import useLoginModal from "../../hooks/useLoginModal";
 import { useRouter } from "next/router";
 import { useCallback } from "react";
 import { FaFeather } from "react-icons/fa";
@@ -52,7 +52,7 @@ const SidebarTweetButton = () => {
           text-white
           text-[20px]"
         >
-          Tweet
+          Post
         </p>
       </div>
     </div>
