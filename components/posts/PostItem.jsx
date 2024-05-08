@@ -11,6 +11,7 @@ import Avatar from "../Avatar";
 
 const PostItem = (props) => {
   const { data = {}, userId } = props;
+  console.log(data);
 
   const router = useRouter();
   const loginModal = useLoginModal();
@@ -21,7 +22,6 @@ const PostItem = (props) => {
   const goToUser = useCallback(
     (e) => {
       e.stopPropagation();
-
       router.push(`/users/${data.user.id}`);
     },
     [router, data.user.id]

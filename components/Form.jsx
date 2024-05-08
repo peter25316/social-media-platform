@@ -1,9 +1,10 @@
 import useCurrentUser from "@/hooks/useCurrentUser";
 import useLoginModal from "@/hooks/useLoginModal";
 import usePosts from "@/hooks/usePosts";
+import usePost from "@/hooks/usePost";
 import useRegisterModal from "@/hooks/useRegisterModal";
 
-import { useCallback, useState } from "react";
+import { useCallback, useState, useEffect } from "react";
 import toast from "react-hot-toast";
 import axios from "axios";
 
@@ -18,6 +19,7 @@ const Form = (props) => {
 
   const { data: currentUser } = useCurrentUser();
   const { mutate: mutatePosts } = usePosts();
+  const { mutate: mutatePost } = usePost(postId);
 
   const [body, setBody] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -26,18 +28,20 @@ const Form = (props) => {
     try {
       setIsLoading(true);
 
-      await axios.post("/api/posts", { body });
+      const url = isComment ? `/api/comments?postId=${postId}` : `/api/posts`;
+
+      await axios.post(url, { body });
 
       toast.success("Tweet created");
-
       setBody("");
+      mutatePost();
       mutatePosts();
     } catch (error) {
-      toast.error("Something went wrong");
+      toast.error("Something went wrong here");
     } finally {
       setIsLoading(false);
     }
-  }, [body, mutatePosts]);
+  }, [body, mutatePosts, isComment, postId, mutatePost]);
 
   return (
     <div className="border-b-[1px] border-neutral-800 px-5 py-2">

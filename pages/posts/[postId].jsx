@@ -1,6 +1,7 @@
 import Form from "@/components/Form";
 import Header from "@/components/Header";
 import PostItem from "@/components/posts/PostItem";
+import CommentFeed from "../../components/posts/CommentFeed";
 
 import usePost from "@/hooks/usePost";
 
@@ -21,11 +22,13 @@ const PostView = () => {
     );
   }
 
+  console.log(fetchedPost);
   return (
     <>
       <Header label="Post" showBackArrow />
       <PostItem data={fetchedPost} />
       <Form postId={postId} isComment placeholder="Post your reply" />
+      <CommentFeed comments={fetchedPost?.comments} />
     </>
   );
 };
