@@ -15,6 +15,7 @@ This project is a full-stack Twitter clone built using React, TailwindCSS, Next.
 ## Features
 
 - User authentication (login/signup pages + user sessions)
+  
   ![login](https://github.com/peter25316/twitter-clone/assets/70732959/19cefc4a-7740-4165-8646-341d7318ea69)
   ![register](https://github.com/peter25316/twitter-clone/assets/70732959/b80fd806-68d1-45ed-9a8a-710e1c921a17)
 
