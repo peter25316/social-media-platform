@@ -16,7 +16,8 @@ This project is a full-stack Twitter clone built using React, TailwindCSS, Next.
 
 ### Prisma Schema
 
-![image](https://github.com/peter25316/twitter-clone/assets/70732959/80b33778-8276-4e9e-83df-3e0cb2489250)
+![image](https://github.com/peter25316/social-media-platform/assets/70732959/c862d636-3af9-41e5-8126-ab53478ae7b8)
+
 
 ### Mongdodb Atlas
 
