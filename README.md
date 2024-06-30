@@ -21,7 +21,8 @@ This project is a full-stack Twitter clone built using React, TailwindCSS, Next.
 
 ### Mongdodb Atlas
 
-![image](https://github.com/peter25316/twitter-clone/assets/70732959/5b206761-2809-4de7-be7c-147e3d9e457b)
+![image](https://github.com/peter25316/social-media-platform/assets/70732959/148f2be1-9272-4b74-b4ed-51a1a879236c)
+
 
 ## Features
 
