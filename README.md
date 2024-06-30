@@ -1,6 +1,6 @@
 # Social Media Platform
 
-This project is a full-stack Twitter clone built using React, TailwindCSS, Next.js, Prisma, MongoDB, NextAuth, and Vercel. It features user authentication, real-time posts, likes, retweets, and a fully responsive design.
+This project is a full-stack Social Media Platform built using React, TailwindCSS, Next.js, Prisma, MongoDB, NextAuth, and Vercel. It features user authentication, real-time posts, likes, retweets, and a fully responsive design.
 
 ## Technologies Used
 
