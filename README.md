@@ -58,8 +58,8 @@ This project is a full-stack Social Media Platform built using React, TailwindCS
 To get this project running locally, follow these steps:
 1. Clone the repo
   ```bash
-  git clone https://github.com/yourusername/twitter-clone.git
-  cd twitter-clone
+  git clone https://github.com/yourusername/social-media-platform.git
+  cd social-media-platform
   ```
 2. Install dependencies:
   ```bash
